@@ -1,4 +1,3 @@
-#! /usr/bin/python3
 import urllib.request
 from urllib.parse import urlparse
 from os.path import splitext, basename
@@ -34,7 +33,7 @@ elif imageExt == 'jpg':
     os.remove('avatar.jpg')
     print('Success! Your ChatBot avatar has been updated.')
 elif imageExt == 'gif':
-    #convert to png
+    #Convert to png
     if exists:
         os.remove('static/bot.png')
     image = Image.open('avatar.gif')

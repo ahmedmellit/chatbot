@@ -1,6 +1,3 @@
-#! /usr/bin/python3
-
-#For getting the spreadsheet data from csv
 import os
 import csv
 import sys

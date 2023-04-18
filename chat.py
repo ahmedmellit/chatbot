@@ -1,12 +1,7 @@
-#! /usr/bin/python3
 from flask import Flask, render_template, request
-import random
 import csv
-import os
 from botConfig import myBotName, chatBG, botAvatar, useGoogle, confidenceLevel
 from botRespond import getResponse
-
-##Experimental Date Time
 from dateTime import getTime, getDate
 
 application = Flask(__name__)
@@ -24,7 +19,6 @@ except IOError:
     file = open('BotLog.csv', 'w')
 
 def tryGoogle(myQuery):
-	#print("<br>Try this from my friend Google: <a target='_blank' href='" + j + "'>" + query + "</a>")
 	return "<br><br>You can try this from my friend Google: <a target='_blank' href='https://www.google.com/search?q=" + myQuery + "'>" + myQuery + "</a>"
 
 @application.route("/")
@@ -55,5 +49,4 @@ def get_bot_response():
 
 
 if __name__ == "__main__":
-    #application.run()
     application.run(host='0.0.0.0', port=80)
